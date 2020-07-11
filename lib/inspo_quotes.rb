@@ -1,6 +1,18 @@
-require "inspo_quotes/version"
+class Quotes
+  attr_accessor :quoteText
+  @@all = [] #this is a class variable
 
-module InspoQuotes
-  class Error < StandardError; end
-  # Your code goes here...
+  def initialize(quoteText)
+      @quoteText = quoteText
+      @@all << self
+
+  end
+
+  def self.all
+       @@all
+       #class methods start with self
+  end
+
+
 end
+
