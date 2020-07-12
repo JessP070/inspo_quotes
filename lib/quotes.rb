@@ -2,7 +2,7 @@ class Quotes
   attr_accessor :quoteText, :quoteAuthor
   @@all = [] #this is a class variable
 
-  def initialize(quoteText)
+  def initialize(quoteText, quoteAuthor)
       @quoteText = quoteText
       @quoteAuthor = quoteAuthor
       @@all << self
@@ -15,13 +15,12 @@ class Quotes
   end
 
   def self.quote_text
-    @quoteText
-    end
-
-  def self.quote_author
-  @quoteAuthor
+          @quoteText
   end
 
+  def self.quote_author
+      @quoteAuthor
+  end
 
 end
 
