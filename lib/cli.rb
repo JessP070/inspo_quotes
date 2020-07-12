@@ -47,7 +47,7 @@ class CLI
         def reprint_quote
 
         puts ""
-          puts "Would you like another quote? press 'y' to continue press any key to exit"
+          puts "Would you like another quote? press 'y' to continue press any key and enter to exit"
           puts ""
         user_input = gets.strip.to_s.downcase
         if user_input == "y"
