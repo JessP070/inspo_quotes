@@ -20,12 +20,17 @@ class CLI
         puts "             Welcome              ".yellow
         puts "Need a daily dose of inspiration?".yellow
         puts ""
+        start
     end
 
     def start
         puts "Please type either 'y' for yes, or 'n' for no."
-        user_input = gets.chomp
+        user_input = gets.chomp.to_s.downcase
     if user_input == 'y'
+        puts ""
+
+            print_quote
+            reprint_quote
     elsif user_input == 'n'
         puts "Aww dang it. We'll catch ya later."
     else
