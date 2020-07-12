@@ -7,6 +7,6 @@ class QuotesAPI
      url = "https://quote-garden.herokuapp.com/api/v2/quotes/random"
     quote = HTTParty.get(url)
     Quotes.new(quote["quote"]["quoteText"], quote["quote"]["quoteAuthor"])
-binding.pry
+# binding.pry
     end
 end
