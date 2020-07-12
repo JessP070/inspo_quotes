@@ -35,6 +35,9 @@ class CLI
         puts "Aww dang it. We'll catch ya later."
     else
         puts "invalid input".red
+        start
+    end
+    puts ""
     end
    
 
