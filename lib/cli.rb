@@ -36,7 +36,7 @@ class CLI
             print_quote
             reprint_quote
         elsif user_input == 'n'
-            puts "Aww dang it. We'll catch ya later."
+            puts "Aww dang it. We'll catch ya later.".blue
         
         else
             puts "invalid input".red
