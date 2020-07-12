@@ -1,9 +1,18 @@
 class CLI
-    attr_accessor :api
+    attr_accessor :api, :user_input
    
    def initialize
     @user_input = user_input
    end
+
+   def print_quote
+    @api.get_a_quote
+        Quotes.all.select do |index|
+        puts "Quote: \"#{index.quoteText}\"
+        \nAuthor: #{index.quoteAuthor}".green
+        end
+        Quotes.all.clear
+    end
 
    def call
     # while(true)
