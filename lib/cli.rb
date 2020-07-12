@@ -1,3 +1,5 @@
+require 'colorize'
+ require 'pry'
 class CLI
     attr_accessor :api, :user_input
    
@@ -15,7 +17,6 @@ class CLI
     end
 
    def call
-    # while(true)
         @api = QuotesAPI.new
         puts "             Welcome              ".yellow
         puts "Need a daily dose of inspiration?".yellow
@@ -39,7 +40,20 @@ class CLI
     end
     puts ""
     end
+    def reprint_quote
+
+        puts ""
+          puts "Would you like another quote? press 'y' to continue press any key to exit"
+          puts ""
+          user_input = gets.strip.to_s.downcase
+          if user_input == "y"
+              print_quote
+              reprint_quote
+          elsif user_input == "n"
+          else 
+          
+            puts "Thank you, hope to see you soon!"
+          end 
+      end
+  end
    
-
-
-end
