@@ -17,12 +17,10 @@ class CLI
     end
 
     def call
-        # while(true)
             @api = QuotesAPI.new
             puts "             Welcome              ".yellow
             puts "Need a daily dose of inspiration?".yellow
             puts ""
-            # reprint_quote
             start
     end
 
