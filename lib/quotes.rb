@@ -1,6 +1,6 @@
 class Quotes
   attr_accessor :quoteText, :quoteAuthor
-  @@all = [] #this is a class variable
+  @@all = [] 
 
   def initialize(quoteText, quoteAuthor)
       @quoteText = quoteText
@@ -11,7 +11,6 @@ class Quotes
 
   def self.all
        @@all
-       #class methods start with self
   end
 
   def self.quote_text
